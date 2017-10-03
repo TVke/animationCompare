@@ -1,0 +1,166 @@
+@-webkit-keyframes snowfall{
+	from{transform: translateX(10px) rotateX(20deg)rotateY(-13deg)rotateZ(-7deg) scale(.9);}
+	30%{transform: translateX(-3px) rotateX(40deg)rotateY(153deg)rotateZ(-27deg)scale(.6);}
+	60%{transform: translateX(17px) rotateX(30deg)rotateY(263deg)rotateZ(37deg)scale(.7);}
+	90%{transform: translateX(-5px) rotateX(50deg)rotateY(333deg)rotateZ(60deg)scale(.5);}
+	to{top:100%;transform: translateX(0px) rotateX(0deg)rotateY(360deg)rotateZ(77deg)scale(.8);}
+}
+@keyframes snowfall{
+	from{transform: translateX(10px) rotateX(20deg)rotateY(-13deg)rotateZ(-7deg) scale(.9);}
+	30%{transform: translateX(-3px) rotateX(40deg)rotateY(153deg)rotateZ(-27deg)scale(.6);}
+	60%{transform: translateX(17px) rotateX(30deg)rotateY(263deg)rotateZ(37deg)scale(.7);}
+	90%{transform: translateX(-5px) rotateX(50deg)rotateY(333deg)rotateZ(60deg)scale(.5);}
+	to{top:100%;transform: translateX(0px) rotateX(0deg)rotateY(360deg)rotateZ(77deg)scale(.8);}
+}
+@-webkit-keyframes wave{
+	50%{transform: rotate(155deg);}
+}
+@keyframes wave{
+	50%{transform: rotate(155deg);}
+}
+
+*,html{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 100%;
+}
+h1{
+	text-align: center;
+	color: white;
+	line-height: 85%;
+}
+main{
+	background: #82CAFF url('snow.svg') no-repeat 0 101%;
+	position: absolute;
+	top:0;
+	right:0;
+	left: 0;
+	min-height: 500px;
+	height: 50%;
+}
+#allflakes{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+	perspective: 800px;
+}
+#allflakes>*{
+	fill:white;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: -50px;
+	animation: snowfall 4s infinite ease-out;
+}
+
+#head{
+	background:white;
+	width:100px;
+	height:100px;
+	border-radius:50% 50% 34% 36%;
+	margin:80px auto 0;
+	position: relative;
+}
+#head::before{
+	content: "";
+	position: absolute;
+	left:0;
+	right:0;
+	top:30px;
+	display: block;
+	margin: auto;
+	width: 10px;
+	height: 10px;
+	border-radius: 39% 30% 43% 26%;
+	box-shadow: -19px 2px 0 black, 12px -1px 0 black, -1px 46px 0 black, -17px 44px 0 black, 14px 41px 0 black;
+}
+#head::after{
+	content: "";
+	position: absolute;
+	left:0;
+	right:0;
+	top:50px;
+	display: block;
+	margin-left: -25px;
+	width: 0;
+	height: 0;
+	border-bottom-left-radius: 100% 90%;
+	border-top-right-radius: 10% 60%;
+	border-bottom-right-radius: 8% 50%;
+	border-top-left-radius:30%;
+	transform-origin:right;
+	transform: rotate(2deg);
+	width: 71px;
+	height: 13px;
+	background: repeating-radial-gradient(circle at 0%, orange, orange 20%, black 20.1%, black 22.9%, orange 23%);
+}
+#chest{
+	background: white;
+	width: 140px;
+	height: 60px;
+	margin: auto;
+	border-top-right-radius: 40% 70%;
+	border-top-left-radius: 40% 70%;
+	border-bottom-right-radius: 30% 40%;
+	border-bottom-left-radius: 30% 40%;
+	position: relative;
+}
+#chest::after{
+	content: "";
+	height: 60px;
+	width: 3px;
+	background: #966F33;
+	display: block;
+	top: 37px;
+	left:1px;
+	position: absolute;
+	transform-origin: top left;
+	transform: rotate(120deg);
+	box-shadow: 0 30px 0 #966F33, -1px 50px 0px #966F33,-4px 100px 0 black,-4px 160px 0 black, -1px 135px 0 black, 2px 135px 0 black, 5px 135px 0 black, 8px 135px 0 black, 11px 135px 0 black, 14px 135px 0 black, 17px 135px 0 black, 20px 135px 0 black, 23px 135px 0 black, 26px 135px 0 black, 29px 135px 0 black, 32px 135px 0 black, 35px 135px 0 black, 38px 135px 0 black, 41px 135px 0 black, 44px 135px 0 black, 47px 135px 0 black, 50px 135px 0 black;
+	animation: wave 2s ease infinite;
+}
+#chest::before{
+	content: "";
+	height: 60px;
+	width: 3px;
+	background: #966F33;
+	display: block;
+	top: 37px;
+	right:-2px;
+	position: absolute;
+	transform-origin: top right;
+	transform: rotate(-10deg);
+	box-shadow: 0 30px 0 #966F33, 1px 75px 0px #966F33;
+}
+#bottom{
+	background: white;
+	width: 220px;
+	height: 125px;
+	margin: auto;
+	border-top-right-radius: 14% 45%;
+	border-top-left-radius: 14% 45%;
+	border-bottom-right-radius: 20% 60%;
+	border-bottom-left-radius: 20% 60%;
+	position: relative;
+}
+#bottom::after{
+	content: "";
+	width: 30px;
+	height: 30px;
+	background: black;
+	display: block;
+	border-radius: 28% 24% 34% 22%;
+	transform: rotate(60deg); 
+	margin: auto;
+	top: 25px;
+	left:0;
+	right:0;
+	position: absolute;
+	box-shadow: 45px 30px 0px black;
+}

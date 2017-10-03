@@ -1,0 +1,82 @@
+@-webkit-keyframes kussen {
+	0% {
+		-webkit-transform: translateX(-200px) scale(0.0) rotate(-50deg);
+	}
+
+	20% {
+		-webkit-transform: translateX(-200px) scale(1.5) rotate(-50deg);
+	}
+
+	40% {
+		-webkit-transform: translateX(-200px) scale(0.0) rotate(-50deg);
+	}
+
+	60% {
+		-webkit-transform: translateX(200px) scale(0.0) rotate(5deg);
+	}
+
+	80% {
+		-webkit-transform: translateX(200px) scale(1.5) rotate(5deg);
+	}
+
+	100% {
+		-webkit-transform: translateX(200px) scale(0.0) rotate(5deg);
+	}
+}
+@keyframes kussen {
+	0% {
+		transform: translateX(-200px) scale(0.0) rotate(-50deg);
+	}
+
+	20% {
+		transform: translateX(-200px) scale(1.5) rotate(-50deg);
+	}
+
+	40% {
+		transform: translateX(-200px) scale(0.0) rotate(-50deg);
+	}
+
+	60% {
+		transform: translateX(200px) scale(0.0) rotate(5deg);
+	}
+
+	80% {
+		transform: translateX(200px) scale(1.5) rotate(5deg);
+	}
+
+	100% {
+		transform: translateX(200px) scale(0.0) rotate(5deg);
+	}
+}
+
+*, html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: gainsboro;
+	padding: 30px;
+}
+
+img {
+	border: none;
+}
+
+#wrap {
+	width: 800px;
+	margin: 0 auto;
+}
+
+img {
+	width: 100px;
+	display: block;
+	margin: 10px auto;
+	-webkit-transform: scale(0.0);
+	-webkit-transition: all 0.5s ease;
+}
+
+img {
+	-webkit-animation: kussen 1.5s infinite ease;
+	animation: kussen 1.5s infinite ease;
+}
