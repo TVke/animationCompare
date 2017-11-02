@@ -1,0 +1,129 @@
+* , html {
+	padding: 0;
+	margin: 0
+}
+
+body{
+	background: #333;
+}
+
+.loading {
+	-webkit-perspective: 800;
+	perspective: 800;
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.loading > div {
+	/*-webkit-animation: float-in 2.5s ease-out forwards infinite;*/
+	/*animation: float-in 2.5s ease-out forwards infinite;*/
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d
+}
+
+.loading > div > div:first-child {
+	margin-top: 130px;
+	/*-webkit-animation: show 2.5s linear forwards infinite;*/
+	/*animation: show 2.5s linear forwards infinite*/
+}
+
+.loading > div > div {
+	display: block;
+	width: 200px;
+	height: 66px;
+	background: #fff;
+	margin: 0 auto;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d
+}
+
+.loading > div > div.first {
+	margin-bottom: 50px;
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+	/*-webkit-animation: fold-up 2.5s linear forwards infinite;*/
+	/*animation: fold-up 2.5s linear forwards infinite;*/
+	background: transparent
+}
+
+.loading > div > div.first > div {
+	background: #fff;
+	height: 66px;
+	position: absolute
+}
+
+.loading > div > div.first > div:first-child {
+	width: 93.3381px;
+	height: 46.669px;
+	background: transparent;
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+	-webkit-transform: translateX(-13px) translateY(33px) rotate(45deg);
+	transform: translateX(-13px) translateY(33px) rotate(45deg);
+	/*-webkit-animation: fold-corner 2.5s linear forwards infinite;*/
+	/*animation: fold-corner 2.5s linear forwards infinite*/
+}
+
+.loading > div > div.first > div:nth-child(2) {
+	width: 93.3381px;
+	height: 46.669px;
+	background: transparent;
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+	-webkit-transform: translateX(-13px) translateY(34px) rotate(-135deg);
+	transform: translateX(-13px) translateY(34px) rotate(-135deg);
+	/*-webkit-animation: hide-corner 2.5s linear forwards infinite;*/
+	/*animation: hide-corner 2.5s linear forwards infinite*/
+}
+
+.loading > div > div.first > div:last-child {
+	width: 134px;
+	right: 0
+}
+
+.loading > div > div.last {
+	background: transparent;
+	/*-webkit-animation: second-stage 2.5s linear forwards infinite;*/
+	/*animation: second-stage 2.5s linear forwards infinite;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0
+}
+
+.loading > div > div.last > div {
+	width: 210px
+}
+
+.loading > div > div.last > div:first-child {
+	height: 42.267px;
+	-webkit-transform-origin: bottom center;
+	transform-origin: bottom center;
+	-webkit-transform: translateX(-3px) translateY(-9px) rotate(-18deg);
+	transform: translateX(-3px) translateY(-9px) rotate(-18deg);
+	/*-webkit-animation: second-stage-fold-corner 2.5s linear forwards infinite;*/
+	/*animation: second-stage-fold-corner 2.5s linear forwards infinite*/
+}
+
+.loading > div > div.last > div:first-child svg polygon {
+	/*-webkit-animation: color-wing 2.5s linear forwards infinite;*/
+	/*animation: color-wing 2.5s linear forwards infinite*/
+}
+
+.loading > div > div.last > div:last-child {
+	height: 62.85418px;
+	-webkit-transform-origin: bottom center;
+	transform-origin: bottom center;
+	-webkit-transform: translateX(15px) translateY(-13px) rotate(-18deg);
+	transform: translateX(15px) translateY(-13px) rotate(-18deg)
+}
+
+div{
+	transition: all .5s linear;
+}
+.ani{
+	transform: translate(100%);
+}
