@@ -3,11 +3,55 @@
 <head>
 	<meta charset="UTF-8">
 	<title>CSS vs. JS animation</title>
+	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
 	<link rel="stylesheet" href="index.css">
 </head>
 <body>
-<h1>CSS vs. JS animation</h1>
+<h1 class="heading-1">Web animation</h1>
+<div class="row">
+	<section class="column var-left">
+		<img src="css-logo.svg" alt="css 3">
+		<h2 class="heading-2">CSS</h2>
+		<div class="example var-css var-syntax">
+			<div class="ball"></div>
+		</div>
+		<pre><code>@keyframes &lt;name&gt;{
+  from{left:0;}
+  to{left:100%;}
+}
 
+.ball{
+  animate: &lt;name&gt; 3s linear infinite;
+}</code></pre>
+
+	</section>
+
+	<section class="column var-right">
+		<img src="js-logo.svg" alt="js">
+		<h2 class="heading-2">JS</h2>
+		<div class="example var-js var-syntax">
+			<div id="ball"></div>
+		</div>
+		<pre><code>var counter = 0, step = (100 - 0) / (3 / (1 / 50));
+var animate = setInterval( function(){
+  if( 0 + (counter * step) <= 100 ){
+    ball.setAttribute("style", "left:" + roundNumber(0 + (counter * step), 2) + "%");
+    ++counter;
+  }else{
+    ball.setAttribute("style", "left:" + 100 + "%";
+    clearInterval(animate);
+  }
+}</code></pre>
+
+	</section>
+</div>
+<div class="row">
+	<section class="bottom-arrow var-left"></section>
+	<section class="bottom-arrow var-right"></section>
+</div>
 <script src="index.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

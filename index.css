@@ -1,0 +1,150 @@
+/* css example keyframes */
+@-webkit-keyframes syntax{
+	from{left:0;}
+	to{left:100%;}
+}
+@keyframes syntax{
+	from{left:0;}
+	to{left:100%;}
+}
+
+*,html{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: Helvetica, Arial, sans-serif;
+	background: #FFFCC4;
+}
+
+.heading-1{
+	font-family: "Alfa Slab One", cursive;
+	text-align: center;
+	padding: 10px;
+}
+.heading-2{
+	font-family: "Alfa Slab One", cursive;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.row{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+}
+
+.column{
+	width: 50%;
+}
+
+.column img{
+	display: block;
+	padding: 20px 10px 10px;
+	margin: 0 auto;
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.column.var-left{
+	background: #94ADD3;
+}
+
+.column.var-right{
+	background: #F7BE96;
+}
+
+/*.column::after{*/
+	/*font-family: "Alfa Slab One", cursive;*/
+	/*display: block;*/
+/*}*/
+
+/*.column.var-left::after{*/
+	/*content: "strong";*/
+/*}*/
+
+/*.column.var-right::after{*/
+	/*content: "toghether";*/
+/*}*/
+
+
+/*.column::before{*/
+	/*content: "";*/
+	/*width: 0;*/
+	/*height: 0;*/
+	/*display: block;*/
+/*}*/
+
+/*.column.var-left::before{*/
+	/*background: #94ADD3;*/
+/*}*/
+
+/*.column.var-right::before{*/
+	/*background: #F7BE96;*/
+/*}*/
+
+.bottom-arrow{
+	position: relative;
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-top-width: 0;
+}
+
+.bottom-arrow.var-left{
+	border-right:200px #94ADD3 solid;
+	border-left-width: 0;
+}
+
+.bottom-arrow.var-right{
+	border-left:200px #F7BE96 solid;
+	border-right-width: 0;
+}
+
+.bottom-arrow::after{
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.bottom-arrow.var-left::after{
+	content: "better";
+}
+
+.bottom-arrow.var-right::after{
+	content: "toghether";
+}
+
+/* column content */
+
+.example{
+	display: block;
+	position: relative;
+	height: 100px;
+	margin: 10px auto;
+	background: gainsboro;
+}
+
+.example.var-syntax>*{
+	display: block;
+	background: darkred;
+	width:20px;
+	height: 20px;
+	border-radius: 50%;
+	position: absolute;
+	top: 45%;
+}
+.example.var-css.var-syntax>*{
+	animation: syntax 3s linear infinite;
+}
+
+pre{
+	margin: 10px;
+	padding: 3px;
+	display: block;
+	background: #232323;
+	color: gainsboro;
+	border-radius: 3px;
+	white-space: pre-wrap;
+}
