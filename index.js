@@ -28,19 +28,19 @@ function animate(element,CSSRule,from,to,measurement,howLong){
 }
 
 
-// function snow(amountOfFlaks,insideElement){
-// 	var animationDelay = 0.32342;
-// 	var flakeImageAmount = 10;
-// 	for(var i=0;i<amountOfFlaks;++i){
-// 		var percentFromTheLeft = randomNumber(-1,100,2);
-// 		var delay = roundNumber(animationDelay * i,2);
-// 		var whichFlake = randomNumber(1,flakeImageAmount,0);
-// 		var newFlakes = document.createElement("img");
-// 		newFlakes.src = "flake-" + whichFlake + ".svg";
-// 		newFlakes.setAttribute("style","left:" + percentFromTheLeft + "%;animation-delay:" + delay + "s;");
-// 		insideElement.appendChild(newFlakes);
-// 	}
-// }
+function snow(amountOfFlaks,insideElement){
+	var animationDelay = 0.32342;
+	var flakeImageAmount = 10;
+	for(var i=0;i<amountOfFlaks;++i){
+		var percentFromTheLeft = randomNumber(-10,100,2);
+		var delay = roundNumber(animationDelay * i,2);
+		var whichFlake = randomNumber(1,flakeImageAmount,0);
+		var newFlakes = document.createElement("img");
+		newFlakes.src = "flake-" + whichFlake + ".svg";
+		newFlakes.setAttribute("style","left:" + percentFromTheLeft + "%;animation-delay:" + delay + "s;");
+		insideElement.appendChild(newFlakes);
+	}
+}
 
 var ball = document.getElementById("ball");
 animate(ball,"left",0,100,"%",3);
@@ -48,3 +48,9 @@ animate(ball,"left",0,100,"%",3);
 setInterval(function(){
 	animate(ball,"left",0,100,"%",3);
 },3*1000);
+
+var snowBox = document.getElementById("snow");
+snow(50,snowBox);
+
+var flakesBox = document.getElementById("allFlakes");
+snow(50,flakesBox);

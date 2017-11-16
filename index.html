@@ -13,6 +13,30 @@
 	<section class="column var-left">
 		<img src="css-logo.svg" alt="css 3">
 		<h2 class="heading-2">CSS</h2>
+	</section>
+	<section class="column var-right">
+		<img src="js-logo.svg" alt="js">
+		<h2 class="heading-2">JS</h2>
+	</section>
+</div>
+
+<div class="row">
+	<section class="column var-left">
+		<h3 class="heading-3">Syntax</h3>
+		<p>The CSS syntax is simple and easy to write.
+			It is part of CSS 3 and is largely supported in modern browsers.
+			The control over timing is a very nice extra, in this example it is set to linear but ease-in, ease-out and ease are commonly used.
+			It is even possible to set a cubic bezier to manage time.</p>
+	</section>
+	<section class="column var-right">
+		<h3 class="heading-3">Syntax</h3>
+		<p>The JS syntax is complex and mathematical harder to write.
+			Of course there are libraries to make it easier like GSAP and Velocity.js (two of the fastest libraries for JS animations)</p>
+	</section>
+</div>
+
+<div class="row">
+	<section class="column var-left">
 		<div class="example var-css var-syntax">
 			<div class="ball"></div>
 		</div>
@@ -24,12 +48,9 @@
 .ball{
   animate: &lt;name&gt; 3s linear infinite;
 }</code></pre>
-
 	</section>
-
 	<section class="column var-right">
-		<img src="js-logo.svg" alt="js">
-		<h2 class="heading-2">JS</h2>
+		<noscript>JavaScript needs to be on for this demo</noscript>
 		<div class="example var-js var-syntax">
 			<div id="ball"></div>
 		</div>
@@ -43,13 +64,109 @@ var animate = setInterval( function(){
     clearInterval(animate);
   }
 }</code></pre>
-
 	</section>
 </div>
+
+<div class="row">
+	<section class="column var-left">
+		<h3 class="heading-3">Browser Support</h3>
+		<p>IE: 10+</p>
+		<p>Firefox: 5+</p>
+		<p>Opera: 12.1+</p>
+		<p>Safari: 5.1+</p>
+		<p>Chrome: all</p>
+		<p>mobile: all but Opera Mini</p>
+	</section>
+	<section class="column var-right">
+		<h3 class="heading-3">Browser Support</h3>
+		<p>IE: 6+</p>
+		<p>Firefox: 2+</p>
+		<p>Opera: all</p>
+		<p>Safari: all</p>
+		<p>Chrome: all</p>
+		<p>mobile: all</p>
+	</section>
+</div>
+
+<div class="row">
+	<section class="column var-left">
+		<h3 class="heading-3">Complex Example</h3>
+		<div class="example var-css var-complex">
+			<div>
+				<div></div>
+				<div class="first">
+					<div>
+						<svg viewBox="0 0 93 47" xmlns="http://www.w3.org/2000/svg">
+							<polygon fill="#fff" points="0 0 93 0 47 47 0 0"></polygon>
+						</svg>
+					</div>
+					<div>
+						<svg viewBox="0 0 93 47" xmlns="http://www.w3.org/2000/svg">
+							<polygon fill="#fff" points="0 0 93 0 47 47 0 0"></polygon>
+						</svg>
+					</div>
+					<div></div>
+				</div>
+				<div class="last">
+					<div>
+						<svg viewBox="0 0 210 42.267" xmlns="http://www.w3.org/2000/svg">
+							<polygon fill="#fff" points="0 42.267 82.840 0 210 42.267 0 42.267"></polygon>
+						</svg>
+					</div>
+					<div>
+						<svg viewBox="0 0 210 62.85418" xmlns="http://www.w3.org/2000/svg">
+							<path fill="#fff" d="M0 0h210l-20.134 62.854-189.866-62.854z"></path>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p>This is completely written in CSS. </p>
+	</section>
+	<section class="column var-right">
+		<h3 class="heading-3">Complex Example</h3>
+		<noscript>JavaScript needs to be on for this demo</noscript>
+		<div class="example var-js var-complex" id="snow"></div>
+		<p>This is mostly written in JS only the falling and rotating of the flakes is done with CSS. </p>
+	</section>
+</div>
+
+<div class="row var-last-content">
+	<section class="column var-left">
+		<h3 class="heading-3">Purpose</h3>
+		<p>CSS (Cascading StyleSheet)</p>
+		<p class="var-inset">=> meant for styling</p>
+
+	</section>
+	<section class="column var-right">
+		<h3 class="heading-3">Purpose</h3>
+		<p>JavaScript (scripting language)</p>
+		<p class="var-inset">=> meant for functionality</p>
+	</section>
+</div>
+
 <div class="row">
 	<section class="bottom-arrow var-left"></section>
 	<section class="bottom-arrow var-right"></section>
 </div>
+
+<h3 class="heading-3">The combination</h3>
+<div class="example var-winter">
+	<div id="allFlakes"></div>
+	<div id="head"></div>
+	<div id="chest"></div>
+	<div id="middle"></div>
+	<div id="bottom"></div>
+</div>
+<h3 class="heading-3">Conclusion</h3>
+<p class="var-conclusion">CSS and JS animations are both meaningful.</p>
+<p class="var-conclusion">Just use CSS for the simple stuff and use JS for the events and random parts.</p>
+<p class="var-conclusion">If you have the feeling that you need a lot of unnecessary calculations, try a JS animation library like GSAP(Green Sock) or Velocity.js.</p>
+<p class="var-conclusion">One other thing JS is utilizing the CPU and CSS is using the GPU to make the animations happen so together they use both and not only one.</p>
+
+<h2 class="heading-2 var-ending">I hope you learned something more.</h2>
+<h1 class="heading-1 var-ending">Happy Coding!</h1>
+
 <script src="index.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>

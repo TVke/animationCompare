@@ -478,8 +478,8 @@ body{
 }
 
 .loading {
-	-webkit-perspective: 800;
-	perspective: 800;
+	/*-webkit-perspective: 800;*/
+	/*perspective: 800;*/
 	z-index: 1;
 	position: absolute;
 	left: 0;
